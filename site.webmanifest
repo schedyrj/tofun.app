@@ -1,0 +1,15 @@
+{
+  "name": "Tofun — Randevu və biznes idarəetmə",
+  "short_name": "Tofun",
+  "description": "Gözəllik salonları və randevu ilə işləyən bizneslər üçün rezervasiya və idarəetmə tətbiqi.",
+  "lang": "az",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#256eff",
+  "icons": [
+    { "src": "assets/img/tofun-icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/img/tofun-icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/img/tofun-icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

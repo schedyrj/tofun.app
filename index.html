@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tofun — Rezervasiya və biznes idarəetmə proqramı</title>
+<meta name="description" content="Tofun — randevu ilə işləyən bizneslər üçün rezervasiya və idarəetmə tətbiqi: gözəllik, sağlamlıq, tibb, heyvanlara qulluq və daha çoxu. Onlayn qəbul, komanda və gəlir bir yerdə.">
+<meta name="theme-color" content="#256eff">
+<meta property="og:title" content="Tofun — Randevu qəbulunu sadələşdirin">
+<meta property="og:description" content="Onlayn qəbul, komanda və gəlir — hamısı bir yerdə.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/img/tofun-icon-512.png">
+<meta name="twitter:card" content="summary">
+
+<!-- app icon / favicon set -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/tofun-icon-192.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Əsas məzmuna keç</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="Tofun ana səhifə">
+      <img class="brand-mark" src="assets/img/logo-mark-blue.png" alt="" width="38" height="38">
+      <span>Tofun</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Əsas naviqasiya">
+      <a href="#axin">Necə işləyir</a>
+      <a href="#imkanlar">İmkanlar</a>
+      <a href="#qiymet">Qiymət</a>
+      <a href="#sahelar">Sahələr</a>
+      <a href="#suallar">Suallar</a>
+    </nav>
+
+    <div class="header-actions">
+      <span class="btn btn-primary btn-soon">Tətbiqi endirin</span>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Menyunu aç/bağla">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="aurora aurora-1" aria-hidden="true"></div>
+    <div class="aurora aurora-2" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy hero-stagger">
+        <span class="hero-chip" style="--i:0">
+          <b><span class="pulse"></span>Yeni</b>
+          Tofun Sizin üçündür
+        </span>
+        <h1 style="--i:1">Randevuları<br>asanlaşdırın,<br><em>biznesinizi</em> böyüdün.</h1>
+        <p class="lede" style="--i:2">Biznesinizi idarə etməyin daha ağıllı yolu. Planlama, komanda və gəlir: tək tətbiqdə, tam nəzarətdə.</p>
+        <div class="hero-cta" style="--i:3">
+          <span class="btn btn-primary btn-lg btn-soon">Tətbiqi endirin</span>
+          <a href="#axin" class="btn btn-ghost btn-lg">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            Necə işlədiyinə baxın
+          </a>
+        </div>
+        <div class="hero-proof" style="--i:4">
+          6 ay pulsuz · Kart məlumatı istəmirik · Pulsuz dəstək
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-hidden="true">
+        <div class="layer layer--cal" data-depth="14">
+          <div class="layer-card float-slow">
+            <div class="cal-top">
+              <div>
+                <h4>Cümə, 25 May</h4>
+                <span class="cal-sub">BU GÜN · 5 RANDEVU · 3s 45d</span>
+              </div>
+              <span class="cal-chip">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="15" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 10h16" stroke="currentColor" stroke-width="2"/></svg>
+                Bugün
+              </span>
+            </div>
+            <div class="cal-tabs">
+              <span class="on">Hamısı</span>
+              <span>Təsdiqlənib</span>
+              <span>Gözləmədə <b class="bubble">7</b></span>
+            </div>
+            <div class="cal-body">
+              <div class="slot">
+                <span class="t">09:00</span>
+                <span class="who"><b>Nərmin Əliyeva</b><small>Saç kəsimi və boyama</small></span>
+                <span class="dur">45d</span>
+              </div>
+              <div class="slot">
+                <span class="t">10:00</span>
+                <span class="who"><b>Ceyhun Orucov</b><small>Fərdi məşq</small></span>
+                <span class="dur">30d</span>
+              </div>
+              <div class="slot">
+                <span class="t">10:45</span>
+                <span class="who"><b>Elçin Səfərov</b><small>Saç kəsimi</small></span>
+                <span class="dur">45d</span>
+              </div>
+              <div class="slot">
+                <span class="t">11:40</span>
+                <span class="who"><b>Leyla Hüseynova</b><small>Bədən masajı</small></span>
+                <span class="dur">35d</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer layer--sheet" data-depth="34">
+          <div class="layer-card float-mid">
+            <div class="sheet-grip"></div>
+            <div class="sheet-title">Yeni randevu</div>
+            <div class="sheet-row on"><span>Saç kəsimi və boyama</span><b>60d</b></div>
+            <div class="sheet-row"><span>Aygün R.</span><b>Usta</b></div>
+            <div class="sheet-times">
+              <span>11:00</span><span class="on">11:30</span><span>12:15</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="layer layer--toast" data-depth="46">
+          <div class="layer-card float-fast">
+            <span class="toast-dot">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span>
+              <b>Yeni onlayn randevu</b>
+              <small>Leyla Hüseynova · sabah 14:00</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="layer layer--rev" data-depth="26">
+          <div class="layer-card float-mid">
+            <div class="r-label">Bu günün gəliri</div>
+            <div class="r-val" data-count="1240" data-suffix=" ₼">0 ₼</div>
+            <div class="r-delta">▲ keçən cümədən +14%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== METRIC BAND ===================== -->
+  <div class="band">
+    <div class="container">
+      <div class="band-inner">
+        <div class="band-cell" data-reveal>
+          <div class="m-val">6 ay</div>
+          <div class="m-lbl">pulsuz sınaq müddəti — kart məlumatı istəmirik</div>
+        </div>
+        <div class="band-cell" data-reveal style="--reveal-delay:.08s">
+          <div class="m-val">7/24</div>
+          <div class="m-lbl">onlayn randevu — siz yatanda belə müştəri yazılır</div>
+        </div>
+        <div class="band-cell" data-reveal style="--reveal-delay:.16s">
+          <div class="m-val">1 <span style="font-size:.5em">tətbiq</span></div>
+          <div class="m-lbl">randevu, komanda və gəlir — hamısı bir yerdə</div>
+        </div>
+        <div class="band-cell" data-reveal style="--reveal-delay:.24s">
+          <div class="m-val">~5 <span style="font-size:.55em">dəq</span></div>
+          <div class="m-lbl">Quraşdırma</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== WALKTHROUGH (scroll-pinned) ===================== -->
+  <section class="walk" id="axin">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="kicker"><span class="num">01</span> Bir gün, Tofun-da</span>
+        <h2>Tətbiqi açırsız və hazırsınız.</h2>
+      </div>
+
+      <div class="walk-layout">
+        <div class="walk-media">
+          <div class="walk-phone">
+            <div class="walk-screen">
+              <!-- panel 1 -->
+              <div class="walk-panel is-active" data-panel="0">
+                <img class="walk-shot" src="assets/img/screens/s11-calendar-day.png" alt="" loading="lazy">
+              </div>
+              <!-- panel 2 -->
+              <div class="walk-panel" data-panel="1">
+                <img class="walk-shot" src="assets/img/screens/s14-revenue.png" alt="" loading="lazy">
+              </div>
+              <!-- panel 3 -->
+              <div class="walk-panel" data-panel="2">
+                <img class="walk-shot" src="assets/img/screens/s12-staff-perf.png" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="walk-steps">
+          <article class="walk-step is-active" data-step="0">
+            <span class="step-tag">Təqvim</span>
+            <h3>Günə hazırsınız</h3>
+            <p>Səhər açılışda telefona bir baxırsınız: bugünkü randevular, boş saatlar, kim işdədir — hamısı bir ekranda. Kimsə saatını dəyişsə, randevunu tutub boş yerə çəkirsiniz, bir neçə saniyəlik iş.</p>
+            <ul>
+              <li>Randevunu tutub başqa saata çəkin</li>
+              <li>Boş saatlar müştərilərə avtomatik açıq olur</li>
+            </ul>
+          </article>
+          <article class="walk-step" data-step="1">
+            <span class="step-tag">Analitika</span>
+            <h3>Rəqəmləri özünüz saymayın</h3>
+            <p>Günorta bir nəfəs alıb ayın necə getdiyinə baxırsınız: bu ay nə qədər gəlir, ən çox hansı xidmət gedir, kim daha çox qazandırır. Bir dənə də cədvəl doldurmursunuz — Tofun hamısını özü yığır.</p>
+            <ul>
+              <li>Bu ay keçən aya nisbətən necədir</li>
+              <li>Ən sıx və ən boş saatlar bir baxışda</li>
+            </ul>
+          </article>
+          <article class="walk-step" data-step="2">
+            <span class="step-tag">Ödənişlər</span>
+            <h3>Ay sonu, hər şey hazır gözləyir</h3>
+            <p>Ay bağlanır, hesablaşma vaxtıdır. Hər əməkdaşın gördüyü iş, qazandığı pay, yekun məbləğ — hamısı artıq qarşınızdadır. «Sən o gün neçə müştəri qəbul etdin?» sualı tarixdə qalır, rəqəmlər özü danışır.</p>
+            <ul>
+              <li>Hər əməkdaş üçün aydın hesabat</li>
+              <li>Ödənilən və gözləyən məbləğ ayrı-ayrı</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES (bento) ===================== -->
+  <section class="features" id="imkanlar">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="kicker"><span class="num">02</span> İmkanlar</span>
+        <h2>Az adamla, tam nəzarət</h2>
+      </div>
+
+      <div class="bento">
+        <div class="f-card wide" data-reveal>
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="17" rx="3" stroke="currentColor" stroke-width="2"/><path d="M3 9.5h18" stroke="currentColor" stroke-width="2"/><path d="M8 3v4M16 3v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Boş saatlar özü dolur</h3>
+          <p>Müştəriləriniz istənilən vaxt, zəng etmədən özləri uyğun saatı seçib yazılır. Boş qalan saatlar təqviminizdə özü görünür.</p>
+        </div>
+        <div class="f-card" data-reveal style="--reveal-delay:.06s">
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3a4 4 0 0 1 4 4c0 2-2 3-2 5h-4c0-2-2-3-2-5a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M10 17h4M11 20h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Gəlməyən müştəri azalır</h3>
+          <p>Randevudan əvvəl müştəriyə xatırlatma özü gedir. Unudub gəlməyənlər azalır, boş saat az qalır.</p>
+        </div>
+        <div class="f-card" data-reveal style="--reveal-delay:.12s">
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="5" y="3" width="14" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 8h8M8 12h8M8 16h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Öz qaydalarınızı siz qurursunuz</h3>
+          <p>Gəlməyən və ya son anda ləğv edən müştərilər üçün depozit, no-show və ləğvetmə siyasətini özünüz təyin edirsiniz — biznesinizə uyğun necə istəyirsinizsə, elə tətbiq olunur.</p>
+        </div>
+        <div class="f-card wide" data-reveal style="--reveal-delay:.06s">
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 20h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6 20v-7M12 20V5M18 20v-10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Qərarları rəqəmlərlə verirsiniz</h3>
+          <p>Ən sıx saatlar, təkrar gələn müştərilər və ayın gedişatı avtomatik hesablanır. Qərarı təxminlə yox, faktla verirsiniz.</p>
+        </div>
+        <div class="f-card" data-reveal style="--reveal-delay:.12s">
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="2"/><path d="M5 19c0-3.3 3.1-6 7-6s7 2.7 7 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Hər müştərini tanıyırsınız</h3>
+          <p>Hər müştərinin keçmiş randevuları, seçdiyi xidmətlər və qeydləriniz bir kartda toplanır.</p>
+        </div>
+        <div class="f-card" data-reveal>
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 12 12 20 4 12 12 4l8 8Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg></span>
+          <h3>Unudulan müştəri geri qayıdır</h3>
+          <p>Endirim və kampaniyanı bir neçə toxunuşla qurursunuz, çoxdan gəlməyən müştəriləri xüsusi təklif ilə geri çağırırsınız.</p>
+        </div>
+        <div class="f-card wide" data-reveal>
+          <span class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="7" y="2" width="10" height="20" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M11 19h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+          <h3>Biznes əlinizin altında</h3>
+          <p>Harada olsanız da günün cədvəlini telefondan görürsünüz, randevunu bir toxunuşla təsdiqləyirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST ===================== -->
+  <section class="trust" id="etibar">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="kicker">Niyə Tofun</span>
+        <h2>Bütün işinizi bir tətbiqə etibar edirsiniz</h2>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card" data-reveal>
+          <span class="trust-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 8h14M5 12h14M5 16h9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Azərbaycan, rus və ingilis dilində</h3>
+          <p>Tətbiq üç dildə işləyir — Azərbaycan, rus və ingilis. Müştəriniz hansı dildə rahatdırsa, tətbiqi o dildə istifadə edir.</p>
+        </div>
+        <div class="trust-card" data-reveal style="--reveal-delay:.06s">
+          <span class="trust-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Məlumatlarınız sizindir</h3>
+          <p>Müştəri siyahınız və gəlir hesabatlarınız yalnız sizə görünür, kənar adamlarla paylaşılmır.</p>
+        </div>
+        <div class="trust-card" data-reveal style="--reveal-delay:.12s">
+          <span class="trust-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-7 4 14 2-7h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Artıq canlı məhsul</h3>
+          <p>Tofun konsept deyil — bu gün real bizneslər onunla randevu qəbul edir, komandasını idarə edir və gəlirini izləyir.</p>
+        </div>
+        <div class="trust-card" data-reveal style="--reveal-delay:.18s">
+          <span class="trust-ico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <h3>Bakıda qurulub</h3>
+          <p>Yerli komanda, buradakı bizneslər üçün. Dəstək də bir mesaj uzaqlıqdadır.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section class="pricing" id="qiymet">
+    <div class="container">
+      <div class="price-band" data-reveal>
+        <div class="price-main">
+          <span class="kicker">Qiymət</span>
+          <div class="price-figure"><b>6 ay</b><span>pulsuz sınaq</span></div>
+          <p>Qeydiyyatdan keçən kimi randevu, təqvim, qazanc hesabı, kampaniya və analitika — hamısı 6 ay tamamilə pulsuzdur. Kart məlumatı istəmirik.</p>
+          <p class="price-fine">6 aydan sonra əlçatan, şəffaf aylıq abunə haqqı tətbiq olunur — gizli ödəniş yoxdur.</p>
+        </div>
+        <ul class="price-list">
+          <li>Limitsiz randevu və müştəri</li>
+          <li>Bütün əməkdaşlar üçün təqvim</li>
+          <li>Avtomatik xatırlatma, qazanc hesabı və analitika</li>
+          <li>Pulsuz quraşdırma dəstəyi</li>
+          <li>Müştəriləriniz kartla onlayn ödəyə bilir</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLIENT APP ===================== -->
+  <section class="walk" id="musterilar">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="kicker"><span class="num">03</span> Müştərilər üçün</span>
+        <h2>Müştəriləriniz üçün də rahat</h2>
+      </div>
+
+      <div class="walk-layout">
+        <div class="walk-media">
+          <div class="walk-phone">
+            <div class="walk-screen">
+              <div class="walk-panel is-active" data-panel="0">
+                <img class="walk-shot" src="assets/img/screens/s00-recommended.png" alt="" loading="lazy">
+              </div>
+              <div class="walk-panel" data-panel="1">
+                <img class="walk-shot" src="assets/img/screens/s03-select-time.png" alt="" loading="lazy">
+              </div>
+              <div class="walk-panel" data-panel="2">
+                <img class="walk-shot" src="assets/img/screens/s04-review-confirm.png" alt="" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="walk-steps">
+          <article class="walk-step is-active" data-step="0">
+            <span class="step-tag">Kəşf</span>
+            <h3>Sevdiyi ustanı tapır</h3>
+            <p>Müştəri xəritədə yaxın bizneslərə baxır, başqa müştərilərin rəylərinə görə seçim edir — bu da sizin üçün pulsuz reklam deməkdir.</p>
+            <ul>
+              <li>Reytinq və rəylər hər kartda görünür</li>
+              <li>Ünvan, iş saatı və məsafə bir baxışda</li>
+            </ul>
+          </article>
+          <article class="walk-step" data-step="1">
+            <span class="step-tag">Vaxt seçimi</span>
+            <h3>Uyğun saatı özü seçir</h3>
+            <p>Boş saatlar avtomatik görünür, müştəri istədiyi ustanı və vaxtı seçib davam edir.</p>
+          </article>
+          <article class="walk-step" data-step="2">
+            <span class="step-tag">Təsdiq</span>
+            <h3>Kart və ya nağd ödəyir, təsdiqini alır</h3>
+            <p>Qiyməti görür, kartla və ya nağd ödəməyi seçir və bir toxunuşla randevusunu təsdiqləyir — cəmi 3 addımda, bir neçə dəqiqədə.</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="clients-note" data-reveal>
+        <p>Müştəri tətbiqi artıq hazırdır, tezliklə mağazalarda — indi randevular sizin şəxsi onlayn qəbul linkinizlə gəlir.</p>
+        <div class="store-badges">
+          <span class="store-badge" aria-disabled="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.7 12.4c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.6.9-.7 0-1.9-.9-3.1-.8-1.6 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7 1.4 0 1.8.7 3.1.7 1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.5-1-2.5-3.8ZM14.5 5c.6-.8 1.1-1.9.9-3-1 .1-2.1.7-2.8 1.4-.6.7-1.1 1.8-1 2.9 1.1.1 2.2-.6 2.9-1.3Z"/></svg>
+            <span>App Store <em>Tezliklə</em></span>
+          </span>
+          <span class="store-badge" aria-disabled="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.6c-.4.3-.6.8-.6 1.4v16c0 .6.2 1.1.6 1.4l9.3-9.4-9.3-9.4ZM15 12l2.6-2.6-8.3-4.7L15 12Zm0 0-5.7 7.3 8.3-4.7L15 12Zm2.2-.9c.7-.4 1.2-.9 1.2-1.5s-.5-1.1-1.2-1.5l-1.4-.8-2.9 2.3 2.9 2.3 1.4-.8Z"/></svg>
+            <span>Google Play <em>Tezliklə</em></span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INDUSTRIES (marquee) ===================== -->
+  <section class="industries" id="sahelar">
+    <div class="section-head center" data-reveal>
+      <span class="kicker"><span class="num">04</span> Kimlər üçün</span>
+      <h2>Tofun Sizin üçündür</h2>
+      <p>Tofun randevu ilə işləyən istənilən sahə üçün hazırlanıb — gözəllikdən tutmuş tibbə və heyvan baxımına qədər.</p>
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <article class="ind-card"><div class="ico ico--beauty"><img src="assets/img/icons/cat-hair-salon.png" alt=""></div><h3>Gözəllik</h3><p>Saç, dırnaq, makiyaj və epilyasiya studiyaları.</p></article>
+        <article class="ind-card"><div class="ico ico--health"><img src="assets/img/icons/cat-spa-sauna.png" alt=""></div><h3>Sağlamlıq</h3><p>Masaj, spa və sauna mərkəzləri.</p></article>
+        <article class="ind-card"><div class="ico ico--medical"><img src="assets/img/icons/cat-medical-clinic.png" alt=""></div><h3>Tibb</h3><p>Diş həkimləri, klinikalar və fizioterapiya mərkəzləri.</p></article>
+        <article class="ind-card"><div class="ico ico--pets"><img src="assets/img/icons/cat-pet-grooming.png" alt=""></div><h3>Heyvanlara qulluq</h3><p>Ev heyvanları üçün qulluq və qırxım studiyaları.</p></article>
+        <!-- duplicate for seamless loop -->
+        <article class="ind-card"><div class="ico ico--beauty"><img src="assets/img/icons/cat-hair-salon.png" alt=""></div><h3>Gözəllik</h3><p>Saç, dırnaq, makiyaj və epilyasiya studiyaları.</p></article>
+        <article class="ind-card"><div class="ico ico--health"><img src="assets/img/icons/cat-spa-sauna.png" alt=""></div><h3>Sağlamlıq</h3><p>Masaj, spa və sauna mərkəzləri.</p></article>
+        <article class="ind-card"><div class="ico ico--medical"><img src="assets/img/icons/cat-medical-clinic.png" alt=""></div><h3>Tibb</h3><p>Diş həkimləri, klinikalar və fizioterapiya mərkəzləri.</p></article>
+        <article class="ind-card"><div class="ico ico--pets"><img src="assets/img/icons/cat-pet-grooming.png" alt=""></div><h3>Heyvanlara qulluq</h3><p>Ev heyvanları üçün qulluq və qırxım studiyaları.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW YOU START ===================== -->
+  <section class="how" id="basla-nece">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="kicker"><span class="num">05</span> Necə başlayırsınız</span>
+        <h2>Bu gün qurun, sabah randevu qəbul edin</h2>
+      </div>
+      <div class="how-track" data-reveal>
+        <div class="how-line" aria-hidden="true"></div>
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <h3>Qeydiyyatdan keçin</h3>
+          <p>E-poçt və ya telefon nömrəsi ilə hesab yaradın. Kart məlumatı istəmirik.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <h3>Xidmət və komandanı əlavə edin</h3>
+          <p>Xidmətlərinizi, iş saatlarını və əməkdaşları bir dəfə daxil edin.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <h3>Onlayn qəbul linkinizi paylaşın</h3>
+          <p>Öz səhifənizi Instagram-a, WhatsApp-a və ya profilinizə qoyun. Müştərilər həmin andan özləri yazıla bilər.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SUPPORT PANEL ===================== -->
+  <section class="support">
+    <div class="container">
+      <div class="support-panel" data-reveal>
+        <div>
+          <h2>Quraşdırmada kömək lazımdır?</h2>
+          <p>WhatsApp və ya email ilə yazın — Tofun-u sizin biznesinizə uyğun birlikdə quraq. Xidmətlər, əməkdaşlar, iş saatları... hamısını yığışdırarıq.</p>
+          <div class="support-tags">
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Real adam cavab verir</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Pulsuz quraşdırma</span>
+            <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Tez cavab</span>
+          </div>
+        </div>
+        <div class="support-actions">
+          <a href="https://wa.me/994505014484" class="btn btn-whatsapp btn-lg" id="whatsappCta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.4A10 10 0 0 0 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2Zm5.4 13.6c-.2.5-1.1 1-1.5 1.1-.4.1-.9.1-1.5-.1-.4-.1-.9-.3-1.6-.6-2.6-1.1-4.3-3.7-4.4-3.9-.2-.2-1.1-1.4-1.1-2.6 0-1.2.6-1.8.8-2 .2-.3.5-.3.7-.3h.5c.1 0 .4 0 .6.4.2.5.7 1.7.7 1.8.1.1.1.3 0 .4-.3.6-.6.6-.5.8.5.8 1 1.3 1.7 1.7.3.2.5.2.7 0 .2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.4.7 1.6.8.2.1.4.2.4.3.1.2.1.8-.1 1.3Z"/></svg>
+            WhatsApp-dan yazın
+          </a>
+          <a href="mailto:info@tofun.app" class="btn btn-ghost btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Email yazın
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" id="suallar">
+    <div class="container">
+      <div class="section-head center" data-reveal>
+        <span class="kicker"><span class="num">06</span> Suallar</span>
+        <h2>Başlamadan əvvəl bilmək istədikləriniz</h2>
+      </div>
+
+      <div class="accordion" data-reveal>
+        <div class="acc-item open">
+          <button class="acc-trigger" aria-expanded="true">Necə başlaya bilərəm?<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">Qeydiyyatdan keçin, xidmətlərinizi və əməkdaşlarınızı bir dəfə siyahıya salın — bir neçə dəqiqədən sonra ilk randevunu qəbul etməyə hazırsınız. WhatsApp və ya email ilə yazın, birlikdə edərik.</div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">Doğrudan pulsuzdur? Gizli ödəniş yoxdur?<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">Bəli — tam mənada. Qeydiyyatdan sonra bütün funksiyalar 6 ay tamamilə pulsuzdur, kart məlumatı belə istəmirik. 6 aydan sonra əlçatan, şəffaf aylıq abunə haqqı başlayır — gizli ödəniş, sürpriz xərc yoxdur.</div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">Müştəriyə xatırlatmanı sistem özü göndərir?<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">Bəli. Randevudan əvvəl müştəriyə xatırlatma avtomatik gedir. Belə olanda unudub gəlməyən müştəri xeyli azalır.</div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">Mobil tətbiq var?<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">Bəli. Həm əməkdaşlar, həm də müştərilər üçün mobil tətbiq artıq App Store və Google Play-dədir. Tofun-u brauzerdən də tam istifadə edə bilərsiniz.</div></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-trigger" aria-expanded="false">Quraşdırmaqda kömək edirsiniz?<span class="pm" aria-hidden="true"></span></button>
+          <div class="acc-panel"><div class="acc-panel-inner">Bəli, özü də pulsuz. WhatsApp və ya email ilə yazın — xidmətləri, əməkdaşları və iş saatlarını birlikdə quraq. Adətən bir söhbətdə bitir.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="final" id="basla">
+    <div class="container">
+      <div class="final-panel" data-reveal>
+        <div class="final-mesh" aria-hidden="true"></div>
+        <div>
+          <h2>Biznesinizi böyütməyə <em>bu gün</em> başlayın.</h2>
+          <p>Təqvimi açın, komandanı idarə edin, gəliri izləyin — Tofun hamısını bir yerə yığır.</p>
+          <ul class="check-list on-dark">
+            <li>Gözəllikdən tibbə qədər — hər sahəyə uyğundur</li>
+            <li>Qeydiyyat, müştəri, xatırlatma və gəlir bir sistemdə</li>
+            <li>Quraşdırmada pulsuz kömək</li>
+          </ul>
+        </div>
+        <div class="final-actions">
+          <span class="btn btn-lg btn-soon">Tətbiqi endirin</span>
+          <span class="final-note">✓ 6 ay pulsuz · Kart məlumatı istəmirik</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <img class="brand-mark" src="assets/img/logo-mark-white.png" alt="" width="38" height="38">
+          <span>Tofun</span>
+        </a>
+        <p>Randevu ilə işləyən bizneslər üçün gündəlik idarəetmə tətbiqi.</p>
+        <a href="mailto:info@tofun.app" class="footer-mail">info@tofun.app</a>
+      </div>
+      <div class="footer-col">
+        <h4>Məhsul</h4>
+        <a href="#imkanlar">İmkanlar</a>
+        <a href="#sahelar">Sahələr</a>
+        <a href="#musterilar">Müştərilər üçün</a>
+        <a href="#suallar">Suallar</a>
+      </div>
+      <div class="footer-col">
+        <h4>Şirkət</h4>
+        <a href="#qiymet">Qiymət</a>
+        <a href="#suallar">Suallar</a>
+        <a href="mailto:info@tofun.app">Əlaqə</a>
+      </div>
+      <div class="footer-col">
+        <h4>Hüquqi</h4>
+        <a href="#">Məxfilik Siyasəti</a>
+        <a href="#">İstifadə Şərtləri</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tofun. Bütün hüquqlar qorunur.</span>
+      <span>Bakı, Azərbaycan</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
