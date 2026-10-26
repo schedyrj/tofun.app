@@ -3,130 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
 <title>Dəstək — Tofun</title>
 <meta name="description" content="Tofun dəstək: WhatsApp və e-poçt ilə əlaqə, tez-tez verilən suallar və hesabın silinməsi.">
-<meta name="theme-color" content="#256eff">
-<link rel="canonical" href="https://tofun.app/support">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://tofun.app/support">
 <meta property="og:title" content="Dəstək — Tofun">
 <meta property="og:description" content="WhatsApp və e-poçt ilə əlaqə, tez-tez verilən suallar və hesabın silinməsi.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAYFBMVEUkbf79/f8ocv4WZP9MiP+Rtv/I2v+syP91o/8HWv9ckv9om//X5P/i6/+DrP8lbf690/8AT/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkPYlrAAAAIHRSTlP7//7////////////////d//8AAAAAAAAAAAAAAAAAAAQB8m0AAAEZSURBVHjapZPbsoMgDEVJNpEAYtv//9mTiMd6q30oM45AVu4hPDjcLH7Yd7scurXwAwDcAghF+TOAoCORYA8A3artoomJyhYAuIhEdLmLZwP/ABCT340dEN9PeAPgJ3Wl7G6gRC3mtUi8mDSlHNMgAYVo4ETDCmiXxzyTA7if2+qCq5YZeC7RdWCThXm2xEowdTcSBg84YlsoWBbVTMvLUojijvalxmRCA5LHUdWBfbNQTchLhNUOjQ8Ae5nMd7RNMYD42M1md2Z6NIjlAvAoNXv4Fof/Di7mIBocS3NlE04TNXqBcwiZm1ftBHgHTFE19V6eZ7J3uS/F1dBCW2+SMK6nGlxFpsjAx7HHezB/fzgb4Mvj/fb8/wABewbTQ2CPVgAAAABJRU5ErkJggg==">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js');</script>
 <style>
   :root {
-    --ink: #0e1b3d;
-    --ink-2: #4b5c86;
-    --muted: #6b7896;
-    --bg: #f3f6ff;
-    --card: #ffffff;
-    --line: #dbe3f7;
+    --bg: #ffffff;
+    --surface: #f7f8fa;
+    --line: #e6e9ef;
+    --line-strong: #cfd5df;
+    --ink: #111827;
+    --text: #374151;
+    --muted: #6b7280;
     --blue: #256eff;
-    --blue-600: #1a5ae0;
-    --chip: #e4ecff;
-    --chip-ink: #1a5ae0;
+    --link: #1a5ae0;
+    --blue-soft: #eef3ff;
     --wa: #15803d;
-    --wa-soft: #e3f5ea;
-    --glow-1: rgba(37, 110, 255, .16);
-    --glow-2: rgba(37, 110, 255, .10);
-    --shadow: 0 1px 2px rgba(14, 27, 61, .04), 0 12px 28px -18px rgba(37, 110, 255, .35);
+    --wa-hover: #116a32;
+    --wa-soft: #ebf7ef;
     --display: 'Quicksand', 'Plus Jakarta Sans', system-ui, sans-serif;
     --sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --swoosh: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M7 13.5C64 5.5 152 4 293 10.5' stroke='%23256EFF' stroke-width='8.5' stroke-linecap='round' fill='none'/%3E%3C/svg%3E");
-    color-scheme: light;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ink: #eef3ff;
-      --ink-2: #b6c3e2;
-      --muted: #8d9bbd;
-      --bg: #0a1230;
-      --card: #111c3f;
-      --line: #23345f;
-      --chip: #15275e;
-      --chip-ink: #9cbbff;
-      --wa-soft: #10341f;
-      --glow-1: rgba(37, 110, 255, .22);
-      --glow-2: rgba(37, 110, 255, .12);
-      --shadow: 0 1px 2px rgba(0, 0, 0, .2), 0 14px 30px -20px rgba(0, 0, 0, .6);
-      color-scheme: dark;
-    }
+    color-scheme: light only;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; }
   [hidden] { display: none !important; }
 
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 88px;
+  }
+
   body {
     min-height: 100vh;
     font-family: var(--sans);
-    color: var(--ink);
-    background-color: var(--bg);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
-    line-height: 1.5;
   }
 
-  /* the glow stays put while the long page scrolls (iOS ignores background-attachment: fixed) */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background:
-      radial-gradient(70vmax 70vmax at -10% -15%, var(--glow-1), transparent 60%),
-      radial-gradient(60vmax 60vmax at 110% 115%, var(--glow-2), transparent 60%);
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  :focus-visible {
+    outline: 3px solid rgba(37, 110, 255, .45);
+    outline-offset: 2px;
+    border-radius: 8px;
   }
 
-  a { color: inherit; }
-
-  .wrap {
+  .container {
     width: 100%;
-    max-width: 760px;
+    max-width: 1080px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 0 20px;
   }
 
-  /* top bar */
-  .top {
+  /* ---------- header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding-top: 22px;
+    height: 64px;
   }
 
   .brand {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
     font-family: var(--display);
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     letter-spacing: -.01em;
+  }
+
+  .brand img { width: 34px; height: 34px; border-radius: 10px; }
+
+  .header-link {
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: .95rem;
+    font-weight: 600;
     text-decoration: none;
-    border-radius: 12px;
   }
 
-  .brand img {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px -10px rgba(37, 110, 255, .6);
+  .header-link:hover { background: var(--surface); color: var(--ink); }
+
+  /* ---------- page heading ---------- */
+  .page-hero { padding: 52px 0 4px; }
+
+  .eyebrow {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 
-  .langs { display: none; gap: 4px; padding: 4px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); }
+  .page-title {
+    margin-top: 8px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--ink);
+  }
+
+  .page-lead {
+    max-width: 40em;
+    margin-top: 14px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 5px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    font: inherit;
+    font-size: .98rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .15s, border-color .15s;
+  }
+
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: var(--wa-hover); }
+  .btn-outline { background: #fff; color: var(--ink); border-color: var(--line-strong); }
+  .btn-outline:hover { border-color: var(--muted); }
+
+  /* ---------- footer ---------- */
+  .site-footer { margin-top: 80px; border-top: 1px solid var(--line); }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-top: 26px;
+    padding-bottom: 34px;
+    font-size: .9rem;
+    color: var(--muted);
+  }
+
+  .footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .footer-links a { color: var(--text); font-weight: 500; text-decoration: none; }
+  .footer-links a:hover { color: var(--ink); text-decoration: underline; }
+  .footer-links a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+
+  .narrow { max-width: 760px; }
+
+  /* language switch */
+  .langs {
+    display: none;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+
   .js .langs { display: inline-flex; }
 
   .langs button {
-    min-width: 42px;
+    min-width: 44px;
     min-height: 34px;
-    padding: 6px 10px;
     border: 0;
     border-radius: 9px;
     background: transparent;
@@ -138,504 +230,532 @@
     cursor: pointer;
   }
 
-  .langs button[aria-pressed="true"] { background: var(--blue); color: #fff; }
-  .langs button:hover:not([aria-pressed="true"]) { color: var(--ink); }
+  .langs button:hover { color: var(--ink); }
 
-  /* hero */
-  .hero { padding: 56px 0 8px; }
+  .langs button[aria-pressed="true"] {
+    background: #fff;
+    color: var(--ink);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, .08), 0 0 0 1px var(--line);
+  }
 
-  h1 {
+  [data-l] { display: none; }
+  html[lang="az"] [data-l="az"], html[lang="en"] [data-l="en"], html[lang="ru"] [data-l="ru"] { display: inline; }
+
+  /* sections */
+  .section { margin-top: 56px; }
+
+  .section-title {
     font-family: var(--display);
     font-weight: 700;
-    font-size: clamp(2.6rem, 10vw, 3.8rem);
-    line-height: 1.05;
-    letter-spacing: -.02em;
-  }
-
-  h1 span {
-    padding-bottom: .14em;
-    background: var(--swoosh) no-repeat 0 100% / 100% .3em;
-  }
-
-  .lead {
-    max-width: 34em;
-    margin-top: 22px;
-    font-size: 1.08rem;
-    line-height: 1.65;
-    color: var(--ink-2);
-  }
-
-  section { margin-top: 48px; }
-
-  h2 {
-    font-family: var(--display);
-    font-weight: 700;
-    font-size: 1.55rem;
+    font-size: 1.45rem;
+    line-height: 1.3;
     letter-spacing: -.01em;
+    color: var(--ink);
   }
 
-  h3 {
-    margin: 28px 0 4px;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+  .section-lead { margin-top: 8px; }
 
   /* contact cards */
   .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-top: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
   }
 
   .card {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 20px;
-    border-radius: 22px;
-    background: var(--card);
-    border: 1.5px solid var(--line);
-    box-shadow: var(--shadow);
+    padding: 18px 18px 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+    color: inherit;
     text-decoration: none;
-    transition: transform .2s cubic-bezier(.16, 1, .3, 1), border-color .2s;
+    transition: border-color .15s, box-shadow .15s;
   }
 
-  .card:hover { transform: translateY(-2px); border-color: var(--blue); }
-  .card-wa:hover { border-color: var(--wa); }
-
-  .card:focus-visible, .langs button:focus-visible, .brand:focus-visible, summary:focus-visible, .foot a:focus-visible, .tip a:focus-visible, .del a:focus-visible {
-    outline: 3px solid var(--blue);
-    outline-offset: 3px;
+  .card:hover {
+    border-color: var(--line-strong);
+    box-shadow: 0 8px 24px -16px rgba(16, 24, 40, .25);
   }
 
   .card-icon {
     flex: none;
     display: grid;
     place-items: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 15px;
-    background: var(--chip);
-    color: var(--chip-ink);
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: var(--blue-soft);
+    color: var(--link);
   }
 
   .card-wa .card-icon { background: var(--wa-soft); color: var(--wa); }
-
-  @media (prefers-color-scheme: dark) {
-    .card-wa .card-icon { color: #5bd38b; }
-  }
-
-  .card-icon svg { width: 24px; height: 24px; }
+  .card-icon svg { width: 22px; height: 22px; }
 
   .card-body { display: flex; flex-direction: column; min-width: 0; }
-  .card-title { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-  .card-value { margin-top: 2px; font-size: 1.12rem; font-weight: 700; white-space: nowrap; }
-  .card-note { margin-top: 2px; font-size: .9rem; color: var(--ink-2); }
+  .card-label { font-size: .82rem; font-weight: 600; color: var(--muted); }
+  .card-value { font-size: 1.06rem; font-weight: 700; color: var(--ink); white-space: nowrap; }
+  .card-note { font-size: .88rem; color: var(--muted); }
 
-  .tip {
-    margin-top: 16px;
+  .card-go { flex: none; margin-left: auto; color: var(--line-strong); }
+  .card-go svg { width: 20px; height: 20px; }
+  .card:hover .card-go { color: var(--muted); }
+
+  .note {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
     padding: 14px 16px;
-    border-radius: 16px;
-    background: var(--chip);
-    color: var(--ink-2);
+    border-radius: 14px;
+    background: var(--surface);
     font-size: .95rem;
     line-height: 1.6;
   }
 
+  .note svg { flex: none; width: 20px; height: 20px; margin-top: 1px; color: var(--muted); }
+
   /* FAQ */
-  .faq { margin-top: 6px; border-top: 1px solid var(--line); }
-  .faq details { border-bottom: 1px solid var(--line); }
+  .faq-group { margin-top: 22px; }
+
+  .faq-label {
+    margin-bottom: 8px;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .faq {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #fff;
+  }
+
+  .faq details + details { border-top: 1px solid var(--line); }
 
   .faq summary {
-    position: relative;
-    padding: 18px 44px 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    color: var(--ink);
     font-weight: 600;
-    font-size: 1.02rem;
     line-height: 1.45;
     list-style: none;
     cursor: pointer;
-    border-radius: 8px;
   }
 
   .faq summary::-webkit-details-marker { display: none; }
+  .faq summary:hover { background: var(--surface); }
 
-  .faq summary::before, .faq summary::after {
+  .faq summary::after {
     content: '';
-    position: absolute;
-    right: 8px;
-    top: 50%;
-    width: 14px;
-    height: 2px;
-    border-radius: 2px;
-    background: var(--blue);
-    transition: transform .25s cubic-bezier(.16, 1, .3, 1);
+    flex: none;
+    width: 8px;
+    height: 8px;
+    margin: -4px 4px 0 0;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg);
+    transition: transform .2s;
   }
 
-  .faq summary::after { transform: rotate(90deg); }
-  .faq details[open] summary::after { transform: rotate(0deg); }
+  .faq details[open] summary::after {
+    margin-top: 4px;
+    border-color: var(--link);
+    transform: rotate(-135deg);
+  }
 
-  .faq details p {
-    padding: 0 8px 20px 0;
-    color: var(--ink-2);
+  .faq summary:focus-visible { outline-offset: -3px; border-radius: 0; }
+
+  .answer {
+    padding: 0 20px 18px;
     line-height: 1.7;
   }
 
-  b.path {
-    font-weight: 600;
+  .path { font-weight: 600; color: var(--ink); }
+
+  /* account deletion */
+  .steps {
+    display: grid;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+    counter-reset: step;
+  }
+
+  .steps li {
+    position: relative;
+    padding: 16px 18px 16px 60px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+    line-height: 1.65;
+    counter-increment: step;
+  }
+
+  .steps li::before {
+    content: counter(step);
+    position: absolute;
+    top: 15px;
+    left: 18px;
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: .88rem;
+    font-weight: 700;
+  }
+
+  .subhead {
+    margin-top: 26px;
+    font-size: 1.05rem;
+    font-weight: 700;
     color: var(--ink);
   }
 
-  /* account deletion */
-  .del {
-    margin-top: 18px;
-    padding: 24px;
-    border-radius: 22px;
-    background: var(--card);
-    border: 1.5px solid var(--line);
-    box-shadow: var(--shadow);
-  }
+  .bullets { display: grid; gap: 8px; margin-top: 10px; padding-left: 1.2em; line-height: 1.65; }
+  .bullets li::marker { color: var(--muted); }
 
-  .del > p { color: var(--ink-2); line-height: 1.65; }
-
-  .del ol, .del ul { margin-top: 14px; padding-left: 1.25em; color: var(--ink-2); line-height: 1.65; }
-  .del li + li { margin-top: 10px; }
-  .del li::marker { color: var(--blue); font-weight: 700; }
-
-  .del h4 { margin-top: 22px; font-size: 1rem; font-weight: 700; }
-
-  .tip a, .del a { color: var(--blue-600); font-weight: 600; text-underline-offset: 3px; }
-
-  @media (prefers-color-scheme: dark) {
-    .tip a, .del a { color: #9cbbff; }
-  }
-
-  .foot {
-    margin-top: 56px;
-    padding: 24px 0 32px;
-    border-top: 1px solid var(--line);
-    font-size: .86rem;
-    color: var(--muted);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px 16px;
-    justify-content: space-between;
-  }
-
-  .foot a { color: inherit; text-underline-offset: 3px; }
-
-  @media (max-width: 600px) {
-    .hero { padding-top: 40px; }
+  @media (max-width: 640px) {
+    .page-hero { padding-top: 36px; }
     .cards { grid-template-columns: 1fr; }
-    .del { padding: 20px 18px; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .steps li { padding-left: 56px; }
+    .steps li::before { left: 15px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <header class="top">
-    <a class="brand" href="/">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAMAAAAOusbgAAAAwFBMVEUkbf7+/v8YZf8rcf9Kh/+rx/+St//X5P/H2v93pP9nmv+DrP+80v9bkv/j7P8NXv8/gP9Af/+fwP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9W2CeAAAAQHRSTlP+////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAT5rZwAABIJJREFUeNrtWtuSrCoMFcJNUHuf8/8fuwW1mwRQW2mrdhV5maqZnl6SrKxcsOuaNWvWrFmzZs2aVTCAruP8eVgPCmL+8SzsjDoqzRgzgj/oY84hoHqbnoQVkn1McHjIyWJgsdkngFNYxsbfA88UBsmoAX/guC6BZeYBXGFS3NueBjj6f95nYJm8gbtoH/dKtIercrgTXAcNiGK0o+Dlp4c87sUkDqid6OWqQqYcLy6q4QZUsBvoPlOAy0q4AbUfzuZGFlh/j+uL2Zg9A5SAk2dkA3yL6wXI6WzMSjKUObHbT4I8bJ6h3nvdSVd/X4bnIzlWtL5ILvysqvs6vFzoMu7Ai4/bk+PCqjzdSYdzVYZlGmL9jDUU+Jhk0dJ1nW265A6uWWkKi4DyWMiQgPiAeMAgAro/gcz3cOXiNU8+qwZjpPsTERfiCPO5/+l6fbYFgT0/T5avH4o4L6NU1UhmuNXnK3JBb5dDbG4mxc9uX8qjWqxJI3J4YLcD20HeKYqniTz1p+Tu2NPmtcYSMsVeLRQuP3VRdfK5mPtPyAYjiApwWw7ToZhAQTvebQTX+eK3T5BjBZkJOy1IRiEBg12XLKyFEu6php7PPc4oxNyovgZ6ptKBV2eX/qhOqfYqSpRpC3DRm7rcg5zE/fSxmCx24U/8LIZ4s5AT7ut2PhFfJE4ToCo2RzlP6ysDG6S5ip6EA65HmUB83/xQ8fXjAKp8QDju/AdSzl3BRWQxAbiniqLRBzienP6/OCUismjyi2Ehm4tdQLgnvu31PsCWEdcqOokBDnIsL+p1eVZDZPHPH/leroVhQGwbK03FMKHRJQfsYt6jJ9XXcRFZeqwQq6sjKElpfWMqjmmtMPDmSMDAUyrvl4D7uKGG2LHvOqnjfIoz/8aSCcVME5pv5crEPkCJrO6sIBjOU0HFO4pGUGtTafcRu05g8hgKHGIx1MknxK6eaGLwdfQJSYFv5BPSQEkqrlpEc4g9i1w93cknSyquSPJUx+UJV4kbIeZAvwdXyjjqlqYTu7Ugx+zCTbt9da+P7//jtM8UldjlQlBROwW4QJMW5MZ+nLJrZ8gJkjrWO7Gl6VHq2kPZdKxajIF80d4sQRvrW8viOEHWzJXF6Ql7Q986cOy9VRFyg50K8bfV9tS5rn7ulKfE0bkVW8+r+XpadwL0zBpyg9XN+wDcOa4lCS84lnGBHni4e+cD6bZ6FmX7aQBs6J+TAebuLReRjPfqpxuXTZdY9nZAOae7u4ZPopPd3rZzG1hNaqVknbbJJN5mzg6Q9S+5OCQjIBqK/JY0ueiqcWecFAYzhgt4COYvpNK1uqt0jUm1Siu/nVn3t5mrC1kHN7tVm4xUSkmZu0wc6l1W7i3Pf4frCTacx5V1r2j1WVxX9bY4LQylTVvtdy9mZHMC98Klz4nbKHkY3cv7loMlZ38E+6O3HyD3xsMWWwf8dy9d0Dda3hqqfHH86bsekNxkG2nh6OWBWqGeUcbeKeV6u0h298irPOvbClsb0MEzqJ9d+loUmzVr1qxZs2bN/iH7C3FvILv60ZPaAAAAAElFTkSuQmCC" alt="" width="40" height="40">
-      <span>Tofun</span>
-    </a>
-    <div class="langs" role="group" aria-label="Dil · Language · Язык">
-      <button type="button" data-set-lang="az" aria-pressed="true">AZ</button>
-      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
-      <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+  <header class="site-header">
+    <div class="container narrow header-inner">
+      <a class="brand" href="/">
+        <img src="data:image/png;base64,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" alt="" width="34" height="34">
+        <span>Tofun</span>
+      </a>
+      <div class="langs" role="group" aria-label="Dil · Language · Язык">
+        <button type="button" data-set-lang="az" aria-pressed="true">AZ</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+        <button type="button" data-set-lang="ru" aria-pressed="false">RU</button>
+      </div>
     </div>
   </header>
 
   <!-- ============================== AZ ============================== -->
-  <main data-lang="az" lang="az">
-    <div class="hero">
-      <h1><span>Dəstək</span></h1>
-      <p class="lead">Sualınız var və ya nəsə işləmir? Bizə yazın — kömək edəcəyik.</p>
+  <main class="container narrow" data-lang="az" lang="az">
+    <div class="page-hero">
+      <p class="eyebrow">Kömək mərkəzi</p>
+      <h1 class="page-title">Dəstək</h1>
+      <p class="page-lead">Sualınız var və ya nəsə işləmir? Bizə yazın — kömək edəcəyik.</p>
     </div>
 
-    <section aria-labelledby="az-contact">
-      <h2 id="az-contact">Bizimlə əlaqə</h2>
+    <section class="section" aria-labelledby="az-contact">
+      <h2 class="section-title" id="az-contact">Bizimlə əlaqə</h2>
       <div class="cards">
         <a class="card card-wa" href="https://wa.me/994505014484?text=Salam%2C%20Tofun%20d%C9%99st%C9%99k%20s%C9%99hif%C9%99sind%C9%99n%20yaz%C4%B1ram." target="_blank" rel="noopener">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20.5l1.6-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
           <span class="card-body">
-            <span class="card-title">WhatsApp</span>
+            <span class="card-label">WhatsApp</span>
             <span class="card-value">+994 50 501 44 84</span>
             <span class="card-note">Ən sürətli yol</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
         <a class="card" href="mailto:info@tofun.app?subject=Tofun%20d%C9%99st%C9%99k">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
           <span class="card-body">
-            <span class="card-title">E-poçt</span>
+            <span class="card-label">E-poçt</span>
             <span class="card-value">info@tofun.app</span>
             <span class="card-note">Ətraflı suallar və sənədlər üçün</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
       </div>
-      <p class="tip">Yazanda qeydiyyatdan keçdiyiniz telefon nömrəsini göstərin. Sual rezervasiya ilə bağlıdırsa, məkanın adını, tarixi və saatı da yazın.</p>
+      <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span>Yazanda qeydiyyatdan keçdiyiniz telefon nömrəsini göstərin. Sual rezervasiya ilə bağlıdırsa, məkanın adını, tarixi və saatı da yazın.</span></p>
     </section>
 
-    <section aria-labelledby="az-faq">
-      <h2 id="az-faq">Tez-tez verilən suallar</h2>
+    <section class="section" aria-labelledby="az-faq">
+      <h2 class="section-title" id="az-faq">Tez-tez verilən suallar</h2>
 
-      <h3>Tofun — müştərilər üçün</h3>
-      <div class="faq">
-        <details>
-          <summary>Rezervasiyanın vaxtını necə dəyişim və ya onu necə ləğv edim?</summary>
-          <p>Aşağı menyuda təqvim ikonuna toxunub <b class="path">Görüşlər</b> səhifəsini açın və rezervasiyanı seçin. <b class="path">Görüşünüzü idarə edin</b> bölməsində <b class="path">Görüşü yenidən planlaşdır</b> və ya <b class="path">Görüşü ləğv et</b> düyməsinə basın.</p>
-        </details>
-        <details>
-          <summary>Bildirişlər gəlmir. Nə edim?</summary>
-          <p>Telefonun ayarlarında Tofun üçün bildirişlərə icazə verin. Sonra tətbiqdə <b class="path">Profil › Tənzimləmələr › Bildiriş</b> bölməsini yoxlayın.</p>
-        </details>
-        <details>
-          <summary>Tətbiqin dilini necə dəyişim?</summary>
-          <p><b class="path">Profil › Tənzimləmələr › Dil</b>. Azərbaycan, ingilis, rus və türk dilləri var.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun — müştərilər üçün</p>
+        <div class="faq">
+          <details>
+            <summary>Rezervasiyanın vaxtını necə dəyişim və ya onu necə ləğv edim?</summary>
+            <p class="answer">Aşağı menyuda təqvim ikonuna toxunub <span class="path">Görüşlər</span> səhifəsini açın və rezervasiyanı seçin. <span class="path">Görüşünüzü idarə edin</span> bölməsində <span class="path">Görüşü yenidən planlaşdır</span> və ya <span class="path">Görüşü ləğv et</span> düyməsinə basın.</p>
+          </details>
+          <details>
+            <summary>Bildirişlər gəlmir. Nə edim?</summary>
+            <p class="answer">Telefonun ayarlarında Tofun üçün bildirişlərə icazə verin. Sonra tətbiqdə <span class="path">Profil › Tənzimləmələr › Bildiriş</span> bölməsini yoxlayın.</p>
+          </details>
+          <details>
+            <summary>Tətbiqin dilini necə dəyişim?</summary>
+            <p class="answer"><span class="path">Profil › Tənzimləmələr › Dil</span>. Azərbaycan, ingilis, rus və türk dilləri var.</p>
+          </details>
+        </div>
       </div>
 
-      <h3>Tofun Business — bizneslər üçün</h3>
-      <div class="faq">
-        <details>
-          <summary>Biznesimi Tofun-a necə əlavə edim?</summary>
-          <p>Tofun Business tətbiqini yükləyin, qeydiyyatdan keçin, məkanınızın məlumatlarını və sənədlərini göndərin. Tofun yoxlayıb təsdiqləyəndən sonra məkanınız müştərilərə görünür.</p>
-        </details>
-        <details>
-          <summary>Rezervasiya sorğusunu necə təsdiqləyim?</summary>
-          <p><b class="path">Təqvim › Gözləyən sorğular</b> bölməsini açın, sorğuya toxunun və təsdiqləyin və ya rədd edin. Təsdiqlənən rezervasiya təqvimə düşür və müştəriyə bildiriş gedir.</p>
-        </details>
-        <details>
-          <summary>Xidməti necə əlavə edim və işçi təyin edim?</summary>
-          <p><b class="path">Xidmətlər</b> səhifəsində sağ aşağıdakı <b class="path">+</b> düyməsinə basın, adı, müddəti və qiyməti yazın, sonra xidməti göstərəcək işçiləri seçin.</p>
-        </details>
-        <details>
-          <summary>İşçinin iş saatlarını necə təyin edim?</summary>
-          <p><b class="path">İşçilər › işçi profili › Saatlar</b> tabında hər gün üçün iş aralığını təyin edin. Bir günün saatlarını digər günlərə köçürə bilərsiniz.</p>
-        </details>
-        <details>
-          <summary>Məkanın iş saatlarını necə təyin edim?</summary>
-          <p><b class="path">Biznes parametrləri › İş saatları</b> bölməsində hər gün üçün açılış və bağlanış saatını təyin edin. Bağlı günlərdə düyməni söndürün.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun Business — bizneslər üçün</p>
+        <div class="faq">
+          <details>
+            <summary>Biznesimi Tofun-a necə əlavə edim?</summary>
+            <p class="answer">Tofun Business tətbiqini yükləyin, qeydiyyatdan keçin, məkanınızın məlumatlarını və sənədlərini göndərin. Tofun yoxlayıb təsdiqləyəndən sonra məkanınız müştərilərə görünür.</p>
+          </details>
+          <details>
+            <summary>Rezervasiya sorğusunu necə təsdiqləyim?</summary>
+            <p class="answer"><span class="path">Təqvim › Gözləyən sorğular</span> bölməsini açın, sorğuya toxunun və təsdiqləyin və ya rədd edin. Təsdiqlənən rezervasiya təqvimə düşür və müştəriyə bildiriş gedir.</p>
+          </details>
+          <details>
+            <summary>Xidməti necə əlavə edim və işçi təyin edim?</summary>
+            <p class="answer"><span class="path">Xidmətlər</span> səhifəsində sağ aşağıdakı <span class="path">+</span> düyməsinə basın, adı, müddəti və qiyməti yazın, sonra xidməti göstərəcək işçiləri seçin.</p>
+          </details>
+          <details>
+            <summary>İşçinin iş saatlarını necə təyin edim?</summary>
+            <p class="answer"><span class="path">İşçilər › işçi profili › Saatlar</span> tabında hər gün üçün iş aralığını təyin edin. Bir günün saatlarını digər günlərə köçürə bilərsiniz.</p>
+          </details>
+          <details>
+            <summary>Məkanın iş saatlarını necə təyin edim?</summary>
+            <p class="answer"><span class="path">Biznes parametrləri › İş saatları</span> bölməsində hər gün üçün açılış və bağlanış saatını təyin edin. Bağlı günlərdə düyməni söndürün.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section id="delete-account" class="del-section" aria-labelledby="az-delete">
-      <h2 id="az-delete">Hesabın silinməsi</h2>
-      <div class="del">
-        <p>Hesabınızı istənilən vaxt tətbiqin özündən silə bilərsiniz:</p>
-        <ol>
-          <li><b class="path">Tofun</b> (müştərilər): <b class="path">Profil › Tənzimləmələr › Hesabı sil</b>.</li>
-          <li><b class="path">Tofun Business</b>: <b class="path">Daha çox</b> bölməsində yuxarıdakı karta toxunun (sahib üçün <b class="path">Məkan profili</b>, işçi üçün <b class="path">Profilim</b>) və <b class="path">Hesabı sil</b> düyməsinə basın.</li>
-          <li>Tətbiqə daxil ola bilmirsiniz? Hesaba bağlı telefon nömrəsindən <a href="https://wa.me/994505014484?text=Salam%2C%20hesab%C4%B1m%C4%B1%20silm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener">WhatsApp-a</a> və ya <a href="mailto:info@tofun.app?subject=Hesab%C4%B1n%20silinm%C9%99si">info@tofun.app</a> ünvanına «Hesabın silinməsi» mövzusu ilə yazın — hesabı biz siləcəyik.</li>
-        </ol>
-        <h4>Nə silinir</h4>
-        <ul>
-          <li>Adınız, telefon nömrəniz, e-poçtunuz, doğum tarixiniz və profil şəkliniz dərhal silinir, bütün girişlər bağlanır.</li>
-          <li>Keçmiş rezervasiyaların qeydləri adınız olmadan qalır.</li>
-          <li>Biznes hesabı silinəndə gələcək rezervasiyalar ləğv olunur (müştərilərə bildiriş gedir, heç kimdən haqq tutulmur) və məkan tətbiqdə görünmür.</li>
-        </ul>
-      </div>
+    <section class="section del-section" id="delete-account" aria-labelledby="az-delete">
+      <h2 class="section-title" id="az-delete">Hesabın silinməsi</h2>
+      <p class="section-lead">Hesabınızı istənilən vaxt tətbiqin özündən silə bilərsiniz:</p>
+      <ol class="steps">
+        <li><span class="path">Tofun</span> (müştərilər): <span class="path">Profil › Tənzimləmələr › Hesabı sil</span>.</li>
+        <li><span class="path">Tofun Business</span>: <span class="path">Daha çox</span> bölməsində yuxarıdakı karta toxunun (sahib üçün <span class="path">Məkan profili</span>, işçi üçün <span class="path">Profilim</span>) və <span class="path">Hesabı sil</span> düyməsinə basın.</li>
+        <li>Tətbiqə daxil ola bilmirsiniz? Hesaba bağlı telefon nömrəsindən <a href="https://wa.me/994505014484?text=Salam%2C%20hesab%C4%B1m%C4%B1%20silm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener">WhatsApp-a</a> və ya <a href="mailto:info@tofun.app?subject=Hesab%C4%B1n%20silinm%C9%99si">info@tofun.app</a> ünvanına «Hesabın silinməsi» mövzusu ilə yazın — hesabı biz siləcəyik.</li>
+      </ol>
+      <h3 class="subhead">Nə silinir</h3>
+      <ul class="bullets">
+        <li>Adınız, telefon nömrəniz, e-poçtunuz, doğum tarixiniz və profil şəkliniz dərhal silinir, bütün girişlər bağlanır.</li>
+        <li>Keçmiş rezervasiyaların qeydləri adınız olmadan qalır.</li>
+        <li>Biznes hesabı silinəndə gələcək rezervasiyalar ləğv olunur (müştərilərə bildiriş gedir, heç kimdən haqq tutulmur) və məkan tətbiqdə görünmür.</li>
+      </ul>
     </section>
   </main>
 
   <!-- ============================== EN ============================== -->
-  <main data-lang="en" lang="en" hidden>
-    <div class="hero">
-      <h1><span>Support</span></h1>
-      <p class="lead">Have a question, or is something not working? Write to us and we'll help.</p>
+  <main class="container narrow" data-lang="en" lang="en" hidden>
+    <div class="page-hero">
+      <p class="eyebrow">Help center</p>
+      <h1 class="page-title">Support</h1>
+      <p class="page-lead">Have a question, or is something not working? Write to us and we'll help.</p>
     </div>
 
-    <section aria-labelledby="en-contact">
-      <h2 id="en-contact">Contact us</h2>
+    <section class="section" aria-labelledby="en-contact">
+      <h2 class="section-title" id="en-contact">Contact us</h2>
       <div class="cards">
         <a class="card card-wa" href="https://wa.me/994505014484?text=Hello%2C%20I%27m%20writing%20from%20the%20Tofun%20support%20page." target="_blank" rel="noopener">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20.5l1.6-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
           <span class="card-body">
-            <span class="card-title">WhatsApp</span>
+            <span class="card-label">WhatsApp</span>
             <span class="card-value">+994 50 501 44 84</span>
             <span class="card-note">The fastest way</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
         <a class="card" href="mailto:info@tofun.app?subject=Tofun%20support">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
           <span class="card-body">
-            <span class="card-title">Email</span>
+            <span class="card-label">Email</span>
             <span class="card-value">info@tofun.app</span>
             <span class="card-note">For detailed questions and documents</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
       </div>
-      <p class="tip">Please include the phone number you signed up with. If it's about a booking, also add the venue name, date and time.</p>
+      <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span>Please include the phone number you signed up with. If it's about a booking, also add the venue name, date and time.</span></p>
     </section>
 
-    <section aria-labelledby="en-faq">
-      <h2 id="en-faq">Frequently asked questions</h2>
+    <section class="section" aria-labelledby="en-faq">
+      <h2 class="section-title" id="en-faq">Frequently asked questions</h2>
 
-      <h3>Tofun — for customers</h3>
-      <div class="faq">
-        <details>
-          <summary>How do I reschedule or cancel a booking?</summary>
-          <p>Tap the calendar icon in the bottom menu to open <b class="path">Appointments</b> and choose the booking. Under <b class="path">Manage your appointment</b>, tap <b class="path">Reschedule appointment</b> or <b class="path">Cancel appointment</b>.</p>
-        </details>
-        <details>
-          <summary>I'm not getting notifications. What should I do?</summary>
-          <p>Allow notifications for Tofun in your phone settings. Then check <b class="path">Profile › Settings › Notification</b> in the app.</p>
-        </details>
-        <details>
-          <summary>How do I change the app language?</summary>
-          <p><b class="path">Profile › Settings › Language</b>. Azerbaijani, English, Russian and Turkish are available.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun — for customers</p>
+        <div class="faq">
+          <details>
+            <summary>How do I reschedule or cancel a booking?</summary>
+            <p class="answer">Tap the calendar icon in the bottom menu to open <span class="path">Appointments</span> and choose the booking. Under <span class="path">Manage your appointment</span>, tap <span class="path">Reschedule appointment</span> or <span class="path">Cancel appointment</span>.</p>
+          </details>
+          <details>
+            <summary>I'm not getting notifications. What should I do?</summary>
+            <p class="answer">Allow notifications for Tofun in your phone settings. Then check <span class="path">Profile › Settings › Notification</span> in the app.</p>
+          </details>
+          <details>
+            <summary>How do I change the app language?</summary>
+            <p class="answer"><span class="path">Profile › Settings › Language</span>. Azerbaijani, English, Russian and Turkish are available.</p>
+          </details>
+        </div>
       </div>
 
-      <h3>Tofun Business — for businesses</h3>
-      <div class="faq">
-        <details>
-          <summary>How do I add my business to Tofun?</summary>
-          <p>Download the Tofun Business app, sign up, and send your venue details and documents. Once Tofun has reviewed and approved them, your venue becomes visible to customers.</p>
-        </details>
-        <details>
-          <summary>How do I approve a booking request?</summary>
-          <p>Open <b class="path">Calendar › Pending requests</b>, tap a request, then confirm or reject it. Confirmed bookings move into your calendar and the customer is notified.</p>
-        </details>
-        <details>
-          <summary>How do I add a service and assign staff?</summary>
-          <p>On the <b class="path">Services</b> page, tap the <b class="path">+</b> button at the bottom right, enter the name, duration and price, then pick the staff who will perform it.</p>
-        </details>
-        <details>
-          <summary>How do I set staff working hours?</summary>
-          <p>Go to <b class="path">Staff › staff profile › Hours</b> and set the working range for each day. You can copy one day's hours to the other days.</p>
-        </details>
-        <details>
-          <summary>How do I set business hours?</summary>
-          <p>Go to <b class="path">Business settings › Business hours</b> and set opening and closing times for each day. Turn the toggle off for closed days.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun Business — for businesses</p>
+        <div class="faq">
+          <details>
+            <summary>How do I add my business to Tofun?</summary>
+            <p class="answer">Download the Tofun Business app, sign up, and send your venue details and documents. Once Tofun has reviewed and approved them, your venue becomes visible to customers.</p>
+          </details>
+          <details>
+            <summary>How do I approve a booking request?</summary>
+            <p class="answer">Open <span class="path">Calendar › Pending requests</span>, tap a request, then confirm or reject it. Confirmed bookings move into your calendar and the customer is notified.</p>
+          </details>
+          <details>
+            <summary>How do I add a service and assign staff?</summary>
+            <p class="answer">On the <span class="path">Services</span> page, tap the <span class="path">+</span> button at the bottom right, enter the name, duration and price, then pick the staff who will perform it.</p>
+          </details>
+          <details>
+            <summary>How do I set staff working hours?</summary>
+            <p class="answer">Go to <span class="path">Staff › staff profile › Hours</span> and set the working range for each day. You can copy one day's hours to the other days.</p>
+          </details>
+          <details>
+            <summary>How do I set business hours?</summary>
+            <p class="answer">Go to <span class="path">Business settings › Business hours</span> and set opening and closing times for each day. Turn the toggle off for closed days.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section id="delete-account-en" class="del-section" aria-labelledby="en-delete">
-      <h2 id="en-delete">Deleting your account</h2>
-      <div class="del">
-        <p>You can delete your account from inside the app at any time:</p>
-        <ol>
-          <li><b class="path">Tofun</b> (customers): <b class="path">Profile › Settings › Delete account</b>.</li>
-          <li><b class="path">Tofun Business</b>: in <b class="path">More</b>, tap the card at the top (<b class="path">Venue profile</b> for owners, <b class="path">My profile</b> for staff), then tap <b class="path">Delete account</b>.</li>
-          <li>Can't sign in? Message us on <a href="https://wa.me/994505014484?text=Hello%2C%20I%20would%20like%20to%20delete%20my%20account." target="_blank" rel="noopener">WhatsApp</a> from the phone number linked to the account, or email <a href="mailto:info@tofun.app?subject=Account%20deletion">info@tofun.app</a> with the subject “Account deletion”, and we'll delete it for you.</li>
-        </ol>
-        <h4>What is deleted</h4>
-        <ul>
-          <li>Your name, phone number, email, date of birth and profile photo are deleted immediately, and all sign-ins are closed.</li>
-          <li>Records of past bookings remain without your name.</li>
-          <li>When a business account is deleted, upcoming bookings are cancelled (customers are notified and nobody is charged) and the venue no longer appears in the app.</li>
-        </ul>
-      </div>
+    <section class="section del-section" id="delete-account-en" aria-labelledby="en-delete">
+      <h2 class="section-title" id="en-delete">Deleting your account</h2>
+      <p class="section-lead">You can delete your account from inside the app at any time:</p>
+      <ol class="steps">
+        <li><span class="path">Tofun</span> (customers): <span class="path">Profile › Settings › Delete account</span>.</li>
+        <li><span class="path">Tofun Business</span>: in <span class="path">More</span>, tap the card at the top (<span class="path">Venue profile</span> for owners, <span class="path">My profile</span> for staff), then tap <span class="path">Delete account</span>.</li>
+        <li>Can't sign in? Message us on <a href="https://wa.me/994505014484?text=Hello%2C%20I%20would%20like%20to%20delete%20my%20account." target="_blank" rel="noopener">WhatsApp</a> from the phone number linked to the account, or email <a href="mailto:info@tofun.app?subject=Account%20deletion">info@tofun.app</a> with the subject “Account deletion”, and we'll delete it for you.</li>
+      </ol>
+      <h3 class="subhead">What is deleted</h3>
+      <ul class="bullets">
+        <li>Your name, phone number, email, date of birth and profile photo are deleted immediately, and all sign-ins are closed.</li>
+        <li>Records of past bookings remain without your name.</li>
+        <li>When a business account is deleted, upcoming bookings are cancelled (customers are notified and nobody is charged) and the venue no longer appears in the app.</li>
+      </ul>
     </section>
   </main>
 
   <!-- ============================== RU ============================== -->
-  <main data-lang="ru" lang="ru" hidden>
-    <div class="hero">
-      <h1><span>Поддержка</span></h1>
-      <p class="lead">Есть вопрос или что-то не работает? Напишите нам — поможем.</p>
+  <main class="container narrow" data-lang="ru" lang="ru" hidden>
+    <div class="page-hero">
+      <p class="eyebrow">Центр помощи</p>
+      <h1 class="page-title">Поддержка</h1>
+      <p class="page-lead">Есть вопрос или что-то не работает? Напишите нам — поможем.</p>
     </div>
 
-    <section aria-labelledby="ru-contact">
-      <h2 id="ru-contact">Связаться с нами</h2>
+    <section class="section" aria-labelledby="ru-contact">
+      <h2 class="section-title" id="ru-contact">Связаться с нами</h2>
       <div class="cards">
         <a class="card card-wa" href="https://wa.me/994505014484?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%BF%D0%B8%D1%88%D1%83%20%D1%81%D0%BE%20%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D1%8B%20%D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B8%20Tofun." target="_blank" rel="noopener">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.45L3 20.5l1.6-5.1A8.5 8.5 0 1 1 21 11.5z"/></svg></span>
           <span class="card-body">
-            <span class="card-title">WhatsApp</span>
+            <span class="card-label">WhatsApp</span>
             <span class="card-value">+994 50 501 44 84</span>
             <span class="card-note">Самый быстрый способ</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
         <a class="card" href="mailto:info@tofun.app?subject=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D0%B0%20Tofun">
           <span class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7.5 8 5.5 8-5.5"/></svg></span>
           <span class="card-body">
-            <span class="card-title">E-mail</span>
+            <span class="card-label">E-mail</span>
             <span class="card-value">info@tofun.app</span>
             <span class="card-note">Для подробных вопросов и документов</span>
           </span>
+          <span class="card-go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></span>
         </a>
       </div>
-      <p class="tip">Укажите номер телефона, с которым вы зарегистрированы. Если вопрос о записи — добавьте название заведения, дату и время.</p>
+      <p class="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg><span>Укажите номер телефона, с которым вы зарегистрированы. Если вопрос о записи — добавьте название заведения, дату и время.</span></p>
     </section>
 
-    <section aria-labelledby="ru-faq">
-      <h2 id="ru-faq">Частые вопросы</h2>
+    <section class="section" aria-labelledby="ru-faq">
+      <h2 class="section-title" id="ru-faq">Частые вопросы</h2>
 
-      <h3>Tofun — для клиентов</h3>
-      <div class="faq">
-        <details>
-          <summary>Как перенести или отменить запись?</summary>
-          <p>Нажмите на значок календаря в нижнем меню, чтобы открыть <b class="path">Записи</b>, и выберите запись. В разделе <b class="path">Управление записью</b> нажмите <b class="path">Перенести запись</b> или <b class="path">Отменить запись</b>.</p>
-        </details>
-        <details>
-          <summary>Не приходят уведомления. Что делать?</summary>
-          <p>Разрешите уведомления для Tofun в настройках телефона. Затем проверьте раздел <b class="path">Профиль › Настройки › Уведомления</b> в приложении.</p>
-        </details>
-        <details>
-          <summary>Как сменить язык приложения?</summary>
-          <p><b class="path">Профиль › Настройки › Язык</b>. Доступны азербайджанский, английский, русский и турецкий.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun — для клиентов</p>
+        <div class="faq">
+          <details>
+            <summary>Как перенести или отменить запись?</summary>
+            <p class="answer">Нажмите на значок календаря в нижнем меню, чтобы открыть <span class="path">Записи</span>, и выберите запись. В разделе <span class="path">Управление записью</span> нажмите <span class="path">Перенести запись</span> или <span class="path">Отменить запись</span>.</p>
+          </details>
+          <details>
+            <summary>Не приходят уведомления. Что делать?</summary>
+            <p class="answer">Разрешите уведомления для Tofun в настройках телефона. Затем проверьте раздел <span class="path">Профиль › Настройки › Уведомления</span> в приложении.</p>
+          </details>
+          <details>
+            <summary>Как сменить язык приложения?</summary>
+            <p class="answer"><span class="path">Профиль › Настройки › Язык</span>. Доступны азербайджанский, английский, русский и турецкий.</p>
+          </details>
+        </div>
       </div>
 
-      <h3>Tofun Business — для бизнеса</h3>
-      <div class="faq">
-        <details>
-          <summary>Как добавить свой бизнес в Tofun?</summary>
-          <p>Скачайте приложение Tofun Business, зарегистрируйтесь и отправьте данные заведения и документы. После проверки и одобрения Tofun ваше заведение станет видно клиентам.</p>
-        </details>
-        <details>
-          <summary>Как подтвердить заявку на запись?</summary>
-          <p>Откройте <b class="path">Календарь › Ожидающие заявки</b>, нажмите на заявку и подтвердите либо отклоните её. Подтверждённая запись попадает в календарь, клиент получает уведомление.</p>
-        </details>
-        <details>
-          <summary>Как добавить услугу и назначить сотрудника?</summary>
-          <p>На странице <b class="path">Услуги</b> нажмите <b class="path">+</b> внизу справа, укажите название, длительность и цену, затем выберите сотрудников, которые будут её оказывать.</p>
-        </details>
-        <details>
-          <summary>Как настроить рабочие часы сотрудника?</summary>
-          <p>Откройте <b class="path">Сотрудники › профиль сотрудника › Часы</b> и задайте рабочий интервал на каждый день. Часы одного дня можно скопировать на остальные.</p>
-        </details>
-        <details>
-          <summary>Как настроить часы работы заведения?</summary>
-          <p>Откройте <b class="path">Настройки бизнеса › Часы работы</b> и задайте время открытия и закрытия по дням. Для выходных выключите переключатель.</p>
-        </details>
+      <div class="faq-group">
+        <p class="faq-label">Tofun Business — для бизнеса</p>
+        <div class="faq">
+          <details>
+            <summary>Как добавить свой бизнес в Tofun?</summary>
+            <p class="answer">Скачайте приложение Tofun Business, зарегистрируйтесь и отправьте данные заведения и документы. После проверки и одобрения Tofun ваше заведение станет видно клиентам.</p>
+          </details>
+          <details>
+            <summary>Как подтвердить заявку на запись?</summary>
+            <p class="answer">Откройте <span class="path">Календарь › Ожидающие заявки</span>, нажмите на заявку и подтвердите либо отклоните её. Подтверждённая запись попадает в календарь, клиент получает уведомление.</p>
+          </details>
+          <details>
+            <summary>Как добавить услугу и назначить сотрудника?</summary>
+            <p class="answer">На странице <span class="path">Услуги</span> нажмите <span class="path">+</span> внизу справа, укажите название, длительность и цену, затем выберите сотрудников, которые будут её оказывать.</p>
+          </details>
+          <details>
+            <summary>Как настроить рабочие часы сотрудника?</summary>
+            <p class="answer">Откройте <span class="path">Сотрудники › профиль сотрудника › Часы</span> и задайте рабочий интервал на каждый день. Часы одного дня можно скопировать на остальные.</p>
+          </details>
+          <details>
+            <summary>Как настроить часы работы заведения?</summary>
+            <p class="answer">Откройте <span class="path">Настройки бизнеса › Часы работы</span> и задайте время открытия и закрытия по дням. Для выходных выключите переключатель.</p>
+          </details>
+        </div>
       </div>
     </section>
 
-    <section id="delete-account-ru" class="del-section" aria-labelledby="ru-delete">
-      <h2 id="ru-delete">Удаление аккаунта</h2>
-      <div class="del">
-        <p>Удалить аккаунт можно в любой момент прямо в приложении:</p>
-        <ol>
-          <li><b class="path">Tofun</b> (клиенты): <b class="path">Профиль › Настройки › Удалить аккаунт</b>.</li>
-          <li><b class="path">Tofun Business</b>: в разделе <b class="path">Ещё</b> нажмите на карточку вверху (<b class="path">Профиль заведения</b> для владельца, <b class="path">Мой профиль</b> для сотрудника) и нажмите <b class="path">Удалить аккаунт</b>.</li>
-          <li>Не можете войти? Напишите нам в <a href="https://wa.me/994505014484?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82." target="_blank" rel="noopener">WhatsApp</a> с номера, привязанного к аккаунту, или на <a href="mailto:info@tofun.app?subject=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0">info@tofun.app</a> с темой «Удаление аккаунта» — мы удалим его сами.</li>
-        </ol>
-        <h4>Что удаляется</h4>
-        <ul>
-          <li>Ваши имя, номер телефона, e-mail, дата рождения и фото профиля удаляются сразу, все входы закрываются.</li>
-          <li>Записи о прошлых визитах остаются без вашего имени.</li>
-          <li>При удалении бизнес-аккаунта будущие записи отменяются (клиенты получают уведомление, никто ничего не платит), а заведение больше не показывается в приложении.</li>
-        </ul>
-      </div>
+    <section class="section del-section" id="delete-account-ru" aria-labelledby="ru-delete">
+      <h2 class="section-title" id="ru-delete">Удаление аккаунта</h2>
+      <p class="section-lead">Удалить аккаунт можно в любой момент прямо в приложении:</p>
+      <ol class="steps">
+        <li><span class="path">Tofun</span> (клиенты): <span class="path">Профиль › Настройки › Удалить аккаунт</span>.</li>
+        <li><span class="path">Tofun Business</span>: в разделе <span class="path">Ещё</span> нажмите на карточку вверху (<span class="path">Профиль заведения</span> для владельца, <span class="path">Мой профиль</span> для сотрудника) и нажмите <span class="path">Удалить аккаунт</span>.</li>
+        <li>Не можете войти? Напишите нам в <a href="https://wa.me/994505014484?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D1%85%D0%BE%D1%87%D1%83%20%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82." target="_blank" rel="noopener">WhatsApp</a> с номера, привязанного к аккаунту, или на <a href="mailto:info@tofun.app?subject=%D0%A3%D0%B4%D0%B0%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82%D0%B0">info@tofun.app</a> с темой «Удаление аккаунта» — мы удалим его сами.</li>
+      </ol>
+      <h3 class="subhead">Что удаляется</h3>
+      <ul class="bullets">
+        <li>Ваши имя, номер телефона, e-mail, дата рождения и фото профиля удаляются сразу, все входы закрываются.</li>
+        <li>Записи о прошлых визитах остаются без вашего имени.</li>
+        <li>При удалении бизнес-аккаунта будущие записи отменяются (клиенты получают уведомление, никто ничего не платит), а заведение больше не показывается в приложении.</li>
+      </ul>
     </section>
   </main>
 
-  <footer class="foot">
-    <span>© <span class="year">2026</span> Tofun</span>
-    <a href="/">tofun.app</a>
+  <footer class="site-footer">
+    <div class="container narrow footer-inner">
+      <nav class="footer-links" aria-label="Pages">
+        <a href="/support/" aria-current="page"><span data-l="az">Dəstək</span><span data-l="en">Support</span><span data-l="ru">Поддержка</span></a>
+        <a href="/privacy.html"><span data-l="az">Məxfilik siyasəti</span><span data-l="en">Privacy Policy</span><span data-l="ru">Политика конфиденциальности</span></a>
+        <a href="/terms.html"><span data-l="az">İstifadə şərtləri</span><span data-l="en">Terms of Use</span><span data-l="ru">Условия использования</span></a>
+        <a href="/">tofun.app</a>
+      </nav>
+      <span>© <span class="year">2026</span> Tofun</span>
+    </div>
   </footer>
-</div>
 
 <script>
   (function () {
