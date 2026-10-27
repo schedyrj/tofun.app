@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
+<title>Tofun</title>
+<meta name="description" content="Rezervasiya linki — Tofun tətbiqində açılır.">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tofun">
+<meta property="og:title" content="Tofun — onlayn rezervasiya">
+<meta property="og:description" content="Boş vaxtı seçin və bir neçə toxunuşla rezervasiya edin.">
+<meta property="og:image" content="https://tofun.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAYFBMVEUkbf79/f8ocv4WZP9MiP+Rtv/I2v+syP91o/8HWv9ckv9om//X5P/i6/+DrP8lbf690/8AT/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABkPYlrAAAAIHRSTlP7//7////////////////d//8AAAAAAAAAAAAAAAAAAAQB8m0AAAEZSURBVHjapZPbsoMgDEVJNpEAYtv//9mTiMd6q30oM45AVu4hPDjcLH7Yd7scurXwAwDcAghF+TOAoCORYA8A3artoomJyhYAuIhEdLmLZwP/ABCT340dEN9PeAPgJ3Wl7G6gRC3mtUi8mDSlHNMgAYVo4ETDCmiXxzyTA7if2+qCq5YZeC7RdWCThXm2xEowdTcSBg84YlsoWBbVTMvLUojijvalxmRCA5LHUdWBfbNQTchLhNUOjQ8Ae5nMd7RNMYD42M1md2Z6NIjlAvAoNXv4Fof/Di7mIBocS3NlE04TNXqBcwiZm1ftBHgHTFE19V6eZ7J3uS/F1dBCW2+SMK6nGlxFpsjAx7HHezB/fzgb4Mvj/fb8/wABewbTQ2CPVgAAAABJRU5ErkJggg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f7f8fa;
+    --line: #e6e9ef;
+    --line-strong: #cfd5df;
+    --ink: #111827;
+    --text: #374151;
+    --muted: #6b7280;
+    --blue: #256eff;
+    --link: #1a5ae0;
+    --blue-soft: #eef3ff;
+    --wa: #15803d;
+    --wa-hover: #116a32;
+    --wa-soft: #ebf7ef;
+    --display: 'Quicksand', 'Plus Jakarta Sans', system-ui, sans-serif;
+    --sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color-scheme: light only;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; }
+  [hidden] { display: none !important; }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: 88px;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  :focus-visible {
+    outline: 3px solid rgba(37, 110, 255, .45);
+    outline-offset: 2px;
+    border-radius: 8px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ---------- header ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 64px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink);
+    text-decoration: none;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: -.01em;
+  }
+
+  .brand img { width: 34px; height: 34px; border-radius: 10px; }
+
+  .header-link {
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: .95rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .header-link:hover { background: var(--surface); color: var(--ink); }
+
+  /* ---------- page heading ---------- */
+  .page-hero { padding: 52px 0 4px; }
+
+  .eyebrow {
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .page-title {
+    margin-top: 8px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(2.2rem, 6vw, 3rem);
+    line-height: 1.12;
+    letter-spacing: -.02em;
+    color: var(--ink);
+  }
+
+  .page-lead {
+    max-width: 40em;
+    margin-top: 14px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 5px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 500;
+  }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 50px;
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    font: inherit;
+    font-size: .98rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color .15s, border-color .15s;
+  }
+
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: var(--wa-hover); }
+  .btn-outline { background: #fff; color: var(--ink); border-color: var(--line-strong); }
+  .btn-outline:hover { border-color: var(--muted); }
+
+  /* ---------- footer ---------- */
+  .site-footer { margin-top: 80px; border-top: 1px solid var(--line); }
+
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px 24px;
+    padding-top: 26px;
+    padding-bottom: 34px;
+    font-size: .9rem;
+    color: var(--muted);
+  }
+
+  .footer-links { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+  .footer-links a { color: var(--text); font-weight: 500; text-decoration: none; }
+  .footer-links a:hover { color: var(--ink); text-decoration: underline; }
+  .footer-links a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .link {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 56px 20px 40px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 72px;
+    height: 72px;
+    border-radius: 20px;
+    box-shadow: 0 10px 28px -14px rgba(37, 110, 255, .5);
+  }
+
+  .link h1 {
+    margin-top: 28px;
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: clamp(1.7rem, 6.5vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .lead {
+    max-width: 26em;
+    margin-top: 14px;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    text-wrap: balance;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+    margin-top: 32px;
+  }
+
+  .btn { width: 100%; }
+  .btn-primary { background: var(--link); color: #fff; }
+  .btn-primary:hover { background: #154bc0; }
+
+  .note {
+    max-width: 26em;
+    margin-top: 22px;
+    font-size: .92rem;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  .note.warn {
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--text);
+  }
+
+  .site-footer { margin-top: 0; }
+  .footer-inner { flex-direction: column; justify-content: center; text-align: center; gap: 10px; }
+  .footer-links { justify-content: center; }
+</style>
+</head>
+<body>
+  <main class="link">
+    <img class="logo" src="data:image/png;base64,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" alt="Tofun" width="72" height="72">
+
+    <h1 id="title">Bu link Tofun tətbiqində açılır</h1>
+    <p class="lead" id="lead">Tətbiqdə boş vaxtı seçib bir neçə toxunuşla rezervasiya edə bilərsiniz.</p>
+
+    <div class="actions" id="actions">
+      <a class="btn btn-primary" id="open" href="/" hidden>Tətbiqdə aç</a>
+      <a class="btn btn-outline" id="appstore" href="/" hidden>App Store</a>
+      <a class="btn btn-outline" id="play" href="/" hidden>Google Play</a>
+      <a class="btn btn-outline" id="home" href="/" hidden>Ana səhifə</a>
+    </div>
+
+    <p class="note warn" id="missing-app" hidden></p>
+    <p class="note" id="note"></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-links" aria-label="Pages">
+        <a href="/support/" id="f-support">Dəstək</a>
+        <a href="/privacy.html" id="f-privacy">Məxfilik siyasəti</a>
+        <a href="/terms.html" id="f-terms">İstifadə şərtləri</a>
+      </nav>
+      <span>© <span class="year">2026</span> Tofun</span>
+    </div>
+  </footer>
+
+<script>
+  (function () {
+    // Tətbiqlər mağazada çıxanda linkləri bura yazın — düymələr özü görünəcək.
+    var STORE = {
+      ios: '',      // məs. https://apps.apple.com/app/id0000000000
+      android: ''   // məs. https://play.google.com/store/apps/details?id=app.tofun.client
+    };
+    var ANDROID_PACKAGE = 'app.tofun.client';
+    var IOS_SCHEME = 'schedy';
+
+    var T = {
+      az: {
+        v: 'Bu məkanın səhifəsi Tofun tətbiqində açılır',
+        s: 'Bu ustanın səhifəsi Tofun tətbiqində açılır',
+        x: 'Bu xidmət Tofun tətbiqində açılır',
+        lead: 'Tətbiqdə boş vaxtı seçib bir neçə toxunuşla rezervasiya edə bilərsiniz.',
+        open: 'Tətbiqdə aç',
+        appstore: 'App Store-dan yüklə',
+        play: 'Google Play-dən yüklə',
+        desktop: 'Bu linki telefonunuzda açın — Tofun tətbiqi orada işləyir.',
+        noApp: 'Tətbiq açılmadı? Deməli telefonunuzda hələ quraşdırılmayıb.',
+        soon: 'Tofun tezliklə App Store və Google Play-də olacaq.',
+        missing: 'Səhifə tapılmadı',
+        missingLead: 'Bu ünvanda heç nə yoxdur. Linki yoxlayın və ya ana səhifəyə keçin.',
+        home: 'Ana səhifə',
+        support: 'Dəstək', privacy: 'Məxfilik siyasəti', terms: 'İstifadə şərtləri'
+      },
+      en: {
+        v: "This venue's page opens in the Tofun app",
+        s: "This specialist's page opens in the Tofun app",
+        x: 'This service opens in the Tofun app',
+        lead: 'Pick a free time in the app and book in a few taps.',
+        open: 'Open in the app',
+        appstore: 'Download on the App Store',
+        play: 'Get it on Google Play',
+        desktop: "Open this link on your phone — that's where the Tofun app works.",
+        noApp: "The app didn't open? It isn't installed on your phone yet.",
+        soon: 'Tofun is coming soon to the App Store and Google Play.',
+        missing: 'Page not found',
+        missingLead: "There's nothing at this address. Check the link or go to the home page.",
+        home: 'Home page',
+        support: 'Support', privacy: 'Privacy Policy', terms: 'Terms of Use'
+      },
+      ru: {
+        v: 'Страница этого заведения открывается в приложении Tofun',
+        s: 'Страница этого мастера открывается в приложении Tofun',
+        x: 'Эта услуга открывается в приложении Tofun',
+        lead: 'Выберите свободное время в приложении и запишитесь в пару касаний.',
+        open: 'Открыть в приложении',
+        appstore: 'Загрузить в App Store',
+        play: 'Доступно в Google Play',
+        desktop: 'Откройте эту ссылку на телефоне — приложение Tofun работает там.',
+        noApp: 'Приложение не открылось? Значит, оно ещё не установлено.',
+        soon: 'Скоро Tofun появится в App Store и Google Play.',
+        missing: 'Страница не найдена',
+        missingLead: 'По этому адресу ничего нет. Проверьте ссылку или перейдите на главную.',
+        home: 'Главная',
+        support: 'Поддержка', privacy: 'Политика конфиденциальности', terms: 'Условия использования'
+      }
+    };
+
+    var n = ((navigator.languages && navigator.languages[0]) || navigator.language || 'az').slice(0, 2).toLowerCase();
+    var lang = n === 'ru' ? 'ru' : (n === 'az' || n === 'tr') ? 'az' : n === 'en' ? 'en' : 'az';
+    var t = T[lang];
+    document.documentElement.lang = lang;
+
+    function $(id) { return document.getElementById(id); }
+    function show(id, text, href) {
+      var el = $(id);
+      if (text !== undefined) el.textContent = text;
+      if (href !== undefined) el.href = href;
+      el.hidden = false;
+    }
+
+    $('f-support').textContent = t.support;
+    $('f-privacy').textContent = t.privacy;
+    $('f-terms').textContent = t.terms;
+    document.querySelectorAll('.year').forEach(function (y) { y.textContent = new Date().getFullYear(); });
+
+    // /v/12 · /s/42 · /x/7 — biznes tətbiqinin paylaşdığı linklər.
+    var m = location.pathname.match(/^\/(v|s|x)\/(\d+)\/?$/);
+
+    if (!m) {
+      document.title = t.missing + ' — Tofun';
+      $('title').textContent = t.missing;
+      $('lead').textContent = t.missingLead;
+      show('home', t.home);
+      $('note').hidden = true;
+      return;
+    }
+
+    var path = m[1] + '/' + m[2];
+    document.title = 'Tofun';
+    $('title').textContent = t[m[1]];
+    $('lead').textContent = t.lead;
+
+    var ua = navigator.userAgent;
+    var isIOS = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    var isAndroid = /Android/i.test(ua);
+
+    if (isIOS) {
+      // Universal link burada işə düşmədisə (məs. tətbiqdaxili brauzer və ya
+      // "Safari-də aç" seçilib) — tətbiqin öz sxemi ilə açırıq.
+      show('open', t.open, IOS_SCHEME + '://' + path);
+    } else if (isAndroid) {
+      // Paketə ünvanlanmış intent: tətbiq varsa birbaşa açılır, yoxdursa
+      // Chrome bu səhifəyə `?app=0` ilə qayıdır.
+      var back = location.origin + '/' + path + '?app=0';
+      show('open', t.open, 'intent://tofun.app/' + path + '#Intent;scheme=https;package=' + ANDROID_PACKAGE +
+        ';S.browser_fallback_url=' + encodeURIComponent(back) + ';end');
+    }
+
+    if (STORE.ios && !isAndroid) show('appstore', t.appstore, STORE.ios);
+    if (STORE.android && !isIOS) show('play', t.play, STORE.android);
+
+    if (!isIOS && !isAndroid) {
+      $('note').textContent = t.desktop;
+    } else if (!STORE.ios && !STORE.android) {
+      $('note').textContent = t.soon;
+    } else {
+      $('note').hidden = true;
+    }
+
+    function noApp() { show('missing-app', t.noApp); }
+
+    if (new URLSearchParams(location.search).get('app') === '0') noApp();
+
+    // iOS: sxem açılmasa səhifə görünən qalır — onda izah göstərilir.
+    $('open').addEventListener('click', function () {
+      var timer = setTimeout(function () { if (!document.hidden) noApp(); }, 1800);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) clearTimeout(timer);
+      }, { once: true });
+    });
+  })();
+</script>
+</body>
+</html>

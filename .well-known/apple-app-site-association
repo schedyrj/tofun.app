@@ -1,0 +1,17 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "AHXSM739J9.app.tofun.client",
+          "S4N9Q6F3S9.app.tofun.client"
+        ],
+        "components": [
+          { "/": "/v/*", "comment": "Venue — https://tofun.app/v/12" },
+          { "/": "/s/*", "comment": "Staff — https://tofun.app/s/42" },
+          { "/": "/x/*", "comment": "Service — https://tofun.app/x/7" }
+        ]
+      }
+    ]
+  }
+}
